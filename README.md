@@ -29,7 +29,7 @@ You will also see any lint errors in the console.
 
 На данный момент готов прототип(пример смотрите ниже)
 
-#Usage:
+# Usage:
 И так на мейн странице дисклеймер и уровни сложности:
 ![](readme_img/Снимок.PNG)
 
@@ -48,7 +48,7 @@ You will also see any lint errors in the console.
 Сверху мы уже привели, пример как можно запустить проект у себя на машине.
 
 
-#Contacts:
+# Contacts:
 Команда наЛавэшке, проект superliminial.
 Участники:
 Yernar Abilbay, Orazalinov Askhat, Yerkinbay Zhanbolat.
