@@ -74,57 +74,8 @@ var quizQuestions = [
             }
         ],
         correctAnswer: 2
-    },
-    {
-        question: "Which of these games do you think is best?",
-        answers: [
-            {
-                id: 1,
-                type: "Microsoft",
-                content: "BioShock",
-                definition:"Because sosi"
-            },
-            {
-                id: 2,
-                type: "Nintendo",
-                content: "The Legend of Zelda: Ocarina of Time",
-                definition:"Because krasava"
-            },
-            {
-                id: 3,
-                type: "Sony",
-                content: "Final Fantasy VII",
-                definition:"Because sosi"
-            }
-        ],
-        correctAnswer: 2
-    },
-    {
-        question: "What console would you prefer to own?",
-        answers: [
-            {
-                id: 1,
-                type: "Microsoft",
-                content: "X-Box One",
-                definition:"Because sosi"
-            },
-            {
-                id: 2,
-                type: "Nintendo",
-                content: "Wii U",
-                definition:"Because krasava"
-            },
-            {
-                id: 3,
-                type: "Sony",
-                content: "Playstation 4",
-                definition:"Because sosi"
-            }
-        ],
-        correctAnswer: 2
     }
 ];
 
-let questDef ="Представтьте ситуацию.......";
 
 export default quizQuestions;

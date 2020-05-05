@@ -5,6 +5,9 @@ import Question from '../Components/Question';
 import QuestionCount from '../Components/QuestionCount';
 import AnswerOption from '../Components/AnswerOption';
 import {AwesomeButton} from "react-awesome-button";
+import {Helmet} from "react-helmet";
+import '../quiz.css';
+
 
 class QuizYernar extends React.Component {
     constructor(props) {
@@ -19,6 +22,10 @@ class QuizYernar extends React.Component {
     }
 
     handleQuestionAnswer(definition, answerId) {
+        if(this.props.allQuestions[this.state.currentQuestionId].correctAnswer != this.state.currentIndex) {
+            this.props.emoji(`sad`);
+        }
+
         this.setState({currentDefinition: definition});
         this.setState({currentIndex: answerId});
     }
@@ -30,6 +37,7 @@ class QuizYernar extends React.Component {
     }
 
     renderQuestion() {
+        const classes = this.state.open ? 'basket' : 'basket hide'
         if (this.state.isResult) {
             return <div>
                 Спасибо, что прошли наш квест!
@@ -74,6 +82,7 @@ class QuizYernar extends React.Component {
     refreshPage() {
         window.location.reload(false);
     }
+
 
     renderButton() {
         if (this.state.currentDefinition &&
