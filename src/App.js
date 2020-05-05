@@ -6,7 +6,7 @@ import Result from './Components/Result';
 import logo from './svg/Superliminal_black_logo.png';
 import './App.css';
 import QuizYernar from "./Components/QuizYernar";
-import { AwesomeButton } from "react-awesome-button";
+import {AwesomeButton} from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
 
@@ -23,8 +23,8 @@ class App extends Component {
             answersCount: {},
             result: '',
             quizCategory: 0,
-            mainText:'',
-            mainDef:'Наши квесты содержат в себе случаи из жизни.' +
+            mainText: '',
+            mainDef: 'Наши квесты содержат в себе случаи из жизни.' +
                 'Для вас будут даны вопросы и ответы, один из которых самый корректный и позволит вам пройти квест дальше.' +
                 'При неправильном ответе, будет дано обьяснение почему.' +
                 'Все тесты были сделаны исключительно с нашей точки зрения. ' +
@@ -114,42 +114,44 @@ class App extends Component {
         } else {
             this.setState({result: 'Undetermined'});
         }
-        this.setState({mainDef:'Спасибо, что прошли наш квест!'});
+        this.setState({mainDef: 'Спасибо, что прошли наш квест!'});
     }
 
-    handleGoBack(){
-        this.setState({quizCategory : 0});
+    handleGoBack() {
+        this.setState({quizCategory: 0});
     }
+
     renderQuiz() {
         if (this.state.quizCategory == 1) {
             return (
                 <QuizYernar
-                    allQuestions = {quizQuestions} questDef = {questDef}
+                    allQuestions={quizQuestions} questDef={questDef}
                 />
 
             );
         } else if (this.state.quizCategory == 2) {
             return (
                 <QuizYernar
-                    allQuestions = {quizQuestions}
-                    onBack = {this.handleGoBack}
+                    allQuestions={quizQuestions}
+                    onBack={this.handleGoBack}
                 />
 
             );
         } else if (this.state.quizCategory == 3) {
             return (
                 <QuizYernar
-                    allQuestions = {quizQuestions}
+                    allQuestions={quizQuestions}
                 />
 
             );
         }
     }
 
-    returnMain(){
-        this.setState({result:''});
+    returnMain() {
+        this.setState({result: ''});
         this.setState({quizCategory: 0});
     }
+
     renderResult() {
         return <div>
             <Result quizResult={this.state.result}/>;
@@ -160,26 +162,36 @@ class App extends Component {
     }
 
     handleButtonState(props) {
-        if(props == 1){
-            this.setState({mainDef: 'Представьте ситуацию на улице. Вы гуляете во дворе и встретили вашего сверстника, ' +
-                    'который только переехал. Ваша цель, достигнуть хорошего общего языка, и постараться подружиться.'})
+        if (props == 1) {
+            this.setState({
+                mainDef: 'Представьте ситуацию на улице. Вы гуляете во дворе и встретили вашего сверстника, ' +
+                    'который только переехал. Ваша цель, достигнуть хорошего общего языка, и постараться подружиться.'
+            })
         }
-        if(props == 2){
-            this.setState({mainDef: 'Представьте ситуацию на улице. Вы гуляете во дворе и встретили вашего сверстника, ' +
-                    'который только переехал. Ваша цель, достигнуть хорошего общего языка, и постараться подружиться.'})
+        if (props == 2) {
+            this.setState({
+                mainDef: 'Представьте ситуацию на улице. Вы гуляете во дворе и встретили вашего сверстника, ' +
+                    'который только переехал. Ваша цель, достигнуть хорошего общего языка, и постараться подружиться.'
+            })
         }
-        if(props == 3){
-            this.setState({mainDef: 'Представьте ситуацию на улице. Вы гуляете во дворе и встретили вашего сверстника, ' +
-                    'который только переехал. Ваша цель, достигнуть хорошего общего языка, и постараться подружиться.'})
+        if (props == 3) {
+            this.setState({
+                mainDef: 'Представьте ситуацию на улице. Вы гуляете во дворе и встретили вашего сверстника, ' +
+                    'который только переехал. Ваша цель, достигнуть хорошего общего языка, и постараться подружиться.'
+            })
         }
         this.setState({quizCategory: props});
     }
+
     renderButtonQuiz() {
         if (this.state.quizCategory == 0) {
             return <div className="choiceMain">
-                <AwesomeButton type="primary" style={{left:'20px'}} onPress={()=>this.handleButtonState(1)}>Easy</AwesomeButton>
-                <AwesomeButton type="primary" style={{left:'110px'}} onPress={()=>this.handleButtonState(2)}>Normal</AwesomeButton>
-                <AwesomeButton type="primary" style={{left:'190px'}} onPress={()=>this.handleButtonState(3)}>Hard</AwesomeButton>
+                <AwesomeButton type="primary" style={{left: '20px'}}
+                               onPress={() => this.handleButtonState(1)}>Easy</AwesomeButton>
+                <AwesomeButton type="primary" style={{left: '110px'}}
+                               onPress={() => this.handleButtonState(2)}>Normal</AwesomeButton>
+                <AwesomeButton type="primary" style={{left: '190px'}}
+                               onPress={() => this.handleButtonState(3)}>Hard</AwesomeButton>
             </div>
         }
     }
@@ -190,8 +202,25 @@ class App extends Component {
 
             <div className="App">
                 <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>{this.state.mainText}</h2>
+                    <svg className="sad" width="44px" height="44px" viewBox="0 0 44 44" version="1.1"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g id="fine" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                           transform="translate(0, 0)">
+                            <circle id="body" fill="#E23D18" cx="22" cy="22" r="22"></circle>
+                            <g id="face" transform="translate(13.000000, 20.000000)">
+                                <g className="face">
+                                    <path d="M7,4 C7,5.1045695 7.8954305,6 9,6 C10.1045695,6 11,5.1045695 11,4"
+                                          className="mouth" stroke="#2C0E0F" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          transform="translate(9.000000, 5.000000) rotate(-180.000000) translate(-9.000000, -5.000000) "></path>
+                                    <ellipse className="right-eye" fill="#2C0E0F" cx="16.0941176" cy="1.75609756"
+                                             rx="1.90588235" ry="1.75609756"></ellipse>
+                                    <ellipse className="left-eye" fill="#2C0E0F" cx="1.90588235" cy="1.75609756"
+                                             rx="1.90588235" ry="1.75609756"></ellipse>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
                 </div>
                 {this.state.result ? this.renderResult() : this.renderQuiz()}
                 {this.renderButtonQuiz()}
