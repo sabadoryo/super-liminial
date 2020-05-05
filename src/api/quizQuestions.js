@@ -19,7 +19,7 @@ var quizQuestions = [
             {
                 id: 3,
                 type: "Sony",
-                content: "Толкнуть и сказать обидное слово ",
+                content: "Толкну и скажу обидное слово ",
                 definition:"Это неверно. Так как, вы создаете не лучшее впечатление о себе, " +
                     "что дизорентирует любого нормального человека."
             }
@@ -27,49 +27,50 @@ var quizQuestions = [
         correctAnswer: 2
     },
     {
-        question: "Which console would you prefer to play with friends?",
+        question: "Ваш собеседник тоже представился, и ждет ваших дальнейших действий. Ваш следующий шаг?",
         answers: [
             {
                 id: 1,
                 type: "Microsoft",
-                content: "X-Box",
-                definition:"Because sosi"
+                content: "Спрошу свободен ли он на выходных?",
+                definition:"Не стоит сильно забегать вперед, это насторожит собеседника так как вы только познакомились"
             },
             {
                 id: 2,
                 type: "Nintendo",
-                content: "Nintendo 64",
-                definition:"Because krasava"
+                content: "Расскажу о том где я учусь и чем люблю заниматься в свободное время",
+                definition:"Это верно! Так вы сможете найти общие интересы и продолжить диалог"
             },
             {
                 id: 3,
                 type: "Sony",
-                content: "Playstation 1",
-                definition:"Because sosi"
+                content: "Начну танцевать без какой либо причины",
+                definition:"Нет! Не делайте так. Это странно"
             }
         ],
         correctAnswer: 2
     },
     {
-        question: "Which of these racing franchises would you prefer to play a game from?",
+        question: "Вы успешно завели диалог но, вашему собеседнику необходимо идти домой. Ваши действия?",
         answers: [
             {
                 id: 1,
                 type: "Microsoft",
-                content: "Forza",
-                definition:"Because sosi"
+                content: "Молча развернусь и уйду",
+                definition:"Это неверно! Так как необходимо хотя бы попрощаться, в ином случае ваш новый знакомый возможно больше не захочет с вами общаться"
             },
             {
                 id: 2,
                 type: "Nintendo",
-                content: "Mario Kart",
-                definition:"Because krasava"
+                content: "Попрошу его контактные данные, например в соц.сетях или мессенджерах",
+                definition:"Это верно! Так у вас будет возмжность общаться в любое время, и договариваться о дальнейших встречах"
             },
             {
                 id: 3,
                 type: "Sony",
-                content: "Gran Turismo",
-                definition:"Because sosi"
+                content: "Пойду к нему домой вместе с ним",
+                definition:"Это неверно! Неправильно проситься к кому то домой, если он сам вас не приглашает." + 
+                "Возможно он не хочет этого, но ему неудобно вам отказать. Поэтому лучше избегать этого"
             }
         ],
         correctAnswer: 2
